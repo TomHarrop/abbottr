@@ -16,6 +16,7 @@
 #' @export
 
 MultipleAbbottsCorrection <- function(mortality.data, ci.quantile = 0.95) {
+  return.dt <- FALSE
   if(class(mortality.data)[[1]] == "data.table") {
     return.dt <- TRUE
     my.mortality.data <- data.table::copy(mortality.data)
